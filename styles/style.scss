@@ -1,0 +1,27 @@
+@use "partials/classes";
+@use "partials/navbar";
+@use "partials/left-flex-container";
+@use "partials/right-flex-container";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+body{
+    font-family: 'Roboto';
+}
+
+#container{
+    margin: auto;
+    margin-top: 25px;
+    width: 85%;
+    display: flex;
+    gap: 30px;
+    height: 100vh;
+}

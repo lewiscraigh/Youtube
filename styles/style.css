@@ -1,359 +1,291 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.button-align-and-padding {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 40px;
+  background-color: #f2f2f2;
+  border: none;
+  font-weight: 550;
 }
 
-img{
-    max-width: 100%;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 10px;
+}
+nav #left-navbar {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+nav #left-navbar img {
+  height: 45px;
+}
+nav #middle-navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+nav #middle-navbar #searchbar-container {
+  width: -moz-max-content;
+  width: max-content;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+}
+nav #middle-navbar #searchbar-container input {
+  width: 500px;
+  height: 100%;
+  border: none;
+  border-right: 1px solid lightgrey;
+  outline: none;
+  background-color: transparent;
+  padding: 20px;
+}
+nav #middle-navbar #searchbar-container input::-moz-placeholder {
+  font-weight: 550;
+  font-size: 14px;
+}
+nav #middle-navbar #searchbar-container input::placeholder {
+  font-weight: 550;
+  font-size: 14px;
+}
+nav #middle-navbar #searchbar-container #search-icon-container {
+  background-color: #f6f6f6;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 19px;
+}
+nav #middle-navbar #mic-icon {
+  background-color: #f6f6f6;
+  padding: 9px;
+  border-radius: 50%;
+}
+nav #right-navbar {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+nav #right-navbar #create-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-weight: 550;
+}
+nav #right-navbar #profile-button {
+  background-color: lightblue;
+  border-radius: 50%;
+  padding: 10px 15px;
+  color: white;
+  font-size: 20px;
 }
 
-body{
-    font-family: 'Roboto';
+#left-flex-container {
+  flex-basis: 70%;
+}
+#left-flex-container #img-container {
+  width: 100%;
+  margin-bottom: 15px;
+}
+#left-flex-container #img-container img {
+  width: 100%;
+  border-radius: 15px;
+}
+#left-flex-container h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#left-flex-container #under-video-container {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+}
+#left-flex-container #under-video-container #under-video-container-left-child {
+  display: flex;
+  gap: 20px;
+}
+#left-flex-container #under-video-container #under-video-container-left-child #grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  align-items: center;
+}
+#left-flex-container #under-video-container #under-video-container-left-child #grid-container #profile-pic {
+  grid-row: span 2;
+  border-radius: 50%;
+  width: 40px;
+}
+#left-flex-container #under-video-container #under-video-container-left-child #grid-container #channel-name {
+  display: flex;
+  align-items: center;
+  font-weight: 550;
+  font-size: 16px;
+  gap: 10px;
+}
+#left-flex-container #under-video-container #under-video-container-left-child #grid-container #channel-name .material-symbols-outlined {
+  color: white;
+  background-color: grey;
+  border-radius: 50%;
+  border: none;
+  font-size: 16px;
+}
+#left-flex-container #under-video-container #under-video-container-left-child #grid-container #num-of-subs {
+  font-size: 13px;
+}
+#left-flex-container #under-video-container #under-video-container-left-child button {
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  padding: 0px 30px;
+  font-weight: 550;
+}
+#left-flex-container #under-video-container #under-video-container-right-child {
+  display: flex;
+  gap: 10px;
+}
+#left-flex-container #under-video-container #under-video-container-right-child #thumbs {
+  border: 1px solid black;
+  display: flex;
+  gap: 5px;
+  border: none;
+  border-radius: 30px;
+  background-color: #f2f2f2;
+  padding: 0px 10px;
+}
+#left-flex-container #under-video-container #under-video-container-right-child #thumbs #like-button {
+  background-color: transparent;
+  border-right: 1px solid grey;
+  border-radius: 0;
+}
+#left-flex-container #under-video-container #under-video-container-right-child #thumbs #dislike-button {
+  background-color: transparent;
+  border: none;
 }
 
-/*navbar*/
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 10px;
+#right-flex-container {
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+#right-flex-container #img-container-2 img {
+  border-radius: 20px;
+  border: 2px solid gray;
+}
+#right-flex-container #buttons-container {
+  display: flex;
+  gap: 10px;
+}
+#right-flex-container #buttons-container button {
+  padding: 10px 15px;
+  font-weight: 550;
+  border: none;
+  border-radius: 10px;
+}
+#right-flex-container #buttons-container button:first-child {
+  color: white;
+  background-color: black;
+}
+#right-flex-container #ad-container {
+  display: flex;
+  gap: 10px;
+}
+#right-flex-container #ad-container #ad-img-container {
+  width: 350px;
+  border-radius: 30px;
+}
+#right-flex-container #ad-container #ad-img-container img {
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#right-flex-container #ad-container #ad-description-with-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#right-flex-container #ad-container #ad-description-with-button-container #ad-description {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+#right-flex-container #ad-container #ad-description-with-button-container #ad-description p:first-child {
+  font-size: 16px;
+}
+#right-flex-container #ad-container #ad-description-with-button-container button {
+  background-color: #ADD8E6;
+  color: #065fd4;
+  padding: 10px;
+  width: 50%;
+  font-weight: 550;
+  border: none;
+  border-radius: 30px;
+}
+#right-flex-container .video {
+  display: flex;
+  gap: 10px;
+}
+#right-flex-container .video img {
+  width: 182px;
+  border-radius: 10px;
+}
+#right-flex-container .video .video-description p {
+  font-size: 14px;
+}
+#right-flex-container .video .video-description .side-video-channel-names {
+  display: flex;
+  gap: 5px;
+  margin-top: 8px;
+}
+#right-flex-container .video .video-description .material-symbols-outlined {
+  color: white;
+  background-color: grey;
+  border-radius: 50%;
+  border: none;
+  font-size: 16px;
+}
+#right-flex-container .video .video-description .video-views-and-date {
+  margin-top: 5px;
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
 }
 
-#left-navbar{
-    display: flex;
-    align-items: center;
-    gap: 30px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#left-navbar img{
-    height: 45px
+img {
+  max-width: 100%;
 }
 
-#middle-navbar{
-    display: flex;
-    align-items: center;
-    gap: 20px;
+body {
+  font-family: "Roboto";
 }
 
-#searchbar-container{
-    width: max-content;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    border: 1px solid lightgrey;
-    border-radius: 20px;
-}
-
-#searchbar-container input{
-    width: 500px;
-    height: 100%;
-    border: none;
-    border-right: 1px solid lightgrey;
-    outline: none;
-    background-color: transparent;
-    padding: 20px;
-}
-
-#searchbar-container input::placeholder{
-    font-weight: 550;
-    font-size: 14px;
-}
-
-#search-icon-container{
-    background-color: #f6f6f6;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    padding: 19px;
-    
-}
-
-#mic-icon{
-    background-color: #f6f6f6;
-    padding: 9px;
-    border-radius: 50%;
-}
-
-#right-navbar{
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-#create-button{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 25px;
-    font-weight: 550;
-}
-
-#profile-button{
-    background-color: lightblue;
-    border-radius: 50%;
-    padding: 10px 15px;
-    color: white;
-    font-size: 20px;
-}
-
-
-/*container*/
-#container{
-    margin: auto;
-    margin-top: 25px;
-    width: 85%;
-    display: flex;
-    gap: 30px;
-    height: 100vh;
-}
-
-#left-flex-container{
-    flex-basis: 70%;
-}
-
-h1{
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-#right-flex-container{
-    flex-basis: 30%;
-}
-
-#img-container{
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-#img-container img{
-    width: 100%;
-    border-radius: 15px;
-}
-
-/*under-video-container*/
-#under-video-container{
-    display: flex;
-    justify-content: space-between;
-    height: 40px;
-}
-
-#under-video-container-left-child{
-    display: flex;
-    gap: 20px;
-}
-
-#grid-container{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 10px;
-    align-items: center;
-}
-
-#profile-pic{
-    grid-row: span 2;
-    border-radius: 50%;
-    width: 40px;
-}
-
-#channel-name{
-    display: flex;
-    align-items: center;
-    font-weight: 550;
-    font-size: 16px;
-    gap: 10px;
-}
-
-#num-of-subs{
-    font-size: 13px;
-}
-
-#channel-name .material-symbols-outlined{
-    color: white;
-    background-color: grey;
-    border-radius: 50%;
-    border:none;
-    font-size: 16px;
-}
-
-#under-video-container-left-child button{
-    background-color: black;
-    color: white;
-    border-radius: 30px;
-    border: none;
-    padding: 0px 30px;
-    font-weight: 550;
-}
-
-
-
-/*right-side-stuff*/
-#under-video-container-right-child{
-    display: flex;
-    gap: 10px;
-}
-
-
-#thumbs{
-    border: 1px solid black;
-    display: flex;
-    gap: 5px;
-    border: none;
-    border-radius: 30px;
-    background-color: #f2f2f2;
-    padding: 0px 10px;
-}
-
-#like-button{
-    background-color: transparent;
-    border-right: 1px solid grey;
-    border-radius: 0;
-}
-
-#dislike-button{
-    background-color: transparent;
-    border: none;
-    
-}
-
-.button-align-and-padding{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 10px;
-    border-radius: 40px;
-    background-color: #f2f2f2;
-    border: none;
-    font-weight: 550;
-}
-
-#description-box{
-    margin-top: 15px;
-    background-color: #f2f2f2;
-    border-radius: 15px;
-    padding: 15px 15px;
-    font-size: 14px;
-}
-#description-box-first-child{
-    display: flex;
-    gap: 10px;
-    margin-bottom: 5px;
-}
-
-/*right-side-flex-container*/
-#right-flex-container{
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-}
-
-#img-container-2 img{
-    border-radius: 20px;
-    border: 2px solid gray;
-}
-
-#buttons-container{
-    display: flex;
-    gap: 10px;
-}
-
-#buttons-container button{
-    padding: 10px 15px;
-    font-weight: 550;
-    border: none;
-    border-radius: 10px;
-}
-
-#buttons-container button:first-child{
-    color: white;
-    background-color: black;
-}
-
-#ad-container{
-    display: flex;
-    gap: 10px;
-}
-
-#ad-img-container{
-    width: 350px;
-    border-radius: 30px;
-    
-}
-
-#ad-img-container img{
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-#ad-description-with-button-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#ad-description{
-    font-size: 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-
-#ad-description p:first-child{
-    font-size: 16px;
-}
-
-#ad-description-with-button-container button{
-    background-color: #ADD8E6;
-    color: #065fd4;
-    padding: 10px;
-    width: 50%;
-    font-weight: 550;
-    border: none;
-    border-radius: 30px;
-
-}
-
-/*side-videos*/
-
-.video img{
-    width: 182px;
-    border-radius: 10px;
-}
-
-.video{
-    display: flex;
-    gap: 10px;
-}
-
-.video-views-and-date{
-    margin-top: 5px;
-    display: flex;
-    gap: 10px;
-    font-size: 12px;
-}
-
-.video-description p{
-    font-size: 14px;
-}
-
-.video-description .material-symbols-outlined{
-    color: white;
-    background-color: grey;
-    border-radius: 50%;
-    border: none;
-    font-size: 16px;
-}
-
-.side-video-channel-names{
-    display: flex;
-    gap: 5px;
-    margin-top: 8px;
-}
-
+#container {
+  margin: auto;
+  margin-top: 25px;
+  width: 85%;
+  display: flex;
+  gap: 30px;
+  height: 100vh;
+}/*# sourceMappingURL=style.css.map */
